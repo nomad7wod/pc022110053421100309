@@ -1,10 +1,14 @@
 package com.example.pc022110053421100309
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
@@ -17,9 +21,9 @@ class LoginActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val etEmailLogin = findViewById(R.id.etCorreo)
-        val etPasswordLogin = findViewById(R.id.etPassword)
-        val btnLogin = findViewById(R.id.btnLogin)
+        val etEmailLogin: EditText = findViewById(R.id.etCorreo)
+        val etPasswordLogin: EditText = findViewById(R.id.etPassword)
+        val btnLogin: Button = findViewById(R.id.btnLogin)
         val auth = FirebaseAuth.getInstance()
 
 
