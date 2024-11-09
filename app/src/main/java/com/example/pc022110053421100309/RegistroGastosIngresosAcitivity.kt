@@ -18,12 +18,6 @@ class RegistroGastosIngresosAcitivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_registro_gastos_ingresos_acitivity)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.etDescripcion)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-
         //Referencias a loos editext en al interfaz
         val etFecha: EditText = findViewById(R.id.etFecha)
         val etDescripcion: EditText = findViewById(R.id.etDescripcion)
@@ -31,6 +25,8 @@ class RegistroGastosIngresosAcitivity : AppCompatActivity() {
 
         // Botón para guardar los datos
         val btGuardar: Button = findViewById(R.id.btGuardar)
+
+
         btGuardar.setOnClickListener {
             guardarDatos(
                 fecha = etFecha.text.toString(),
